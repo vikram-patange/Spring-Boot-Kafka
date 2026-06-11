@@ -26,7 +26,7 @@ public class KafkaProducer
     {
 
         LOGGER.info(String.format("Message Sent %s",message));
-        stringKafkaTemplate.send("java",message);
+        stringKafkaTemplate.send("topic-example",message);
     }
 
 
