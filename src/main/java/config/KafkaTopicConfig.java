@@ -2,19 +2,25 @@ package config;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.TopicBuilder;
 
-public class KafkaTopicConfig
-{
-
+@Configuration
+public class KafkaTopicConfig {
 
     @Bean
-    public NewTopic topic()
-    {
+    public NewTopic topicExample() {
 
-        return TopicBuilder.name("Java").build();
-
+        return TopicBuilder
+                .name("topic-example")
+                .build();
     }
 
+    @Bean
+    public NewTopic topicExampleJson() {
 
+        return TopicBuilder
+                .name("topic-example-json")
+                .build();
+    }
 }
